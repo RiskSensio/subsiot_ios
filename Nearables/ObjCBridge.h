@@ -9,5 +9,8 @@
 #ifndef ObjCBridge_h
 #define ObjCBridge_h
 
+#import <EstimoteSDK/EstimoteSDK.h>
+#import "CocoaMQTT/CocoaMQTT.h"
+
 
 #endif /* ObjCBridge_h */

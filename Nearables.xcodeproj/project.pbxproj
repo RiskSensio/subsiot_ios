@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0656C4C725A39F4352425755 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE5E94DF05BDC0ACC1436E4 /* Pods.framework */; };
 		371C8C681C7CCE2000468E1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C8C671C7CCE2000468E1C /* AppDelegate.swift */; };
 		371C8C6A1C7CCE2000468E1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C8C691C7CCE2000468E1C /* ViewController.swift */; };
 		371C8C6D1C7CCE2000468E1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371C8C6B1C7CCE2000468E1C /* Main.storyboard */; };
@@ -14,6 +15,9 @@
 		371C8C721C7CCE2000468E1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371C8C701C7CCE2000468E1C /* LaunchScreen.storyboard */; };
 		371C8C7D1C7CCE2000468E1C /* NearablesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C8C7C1C7CCE2000468E1C /* NearablesTests.swift */; };
 		371C8C881C7CCE2000468E1C /* NearablesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C8C871C7CCE2000468E1C /* NearablesUITests.swift */; };
+		371C8C9B1C7CD79500468E1C /* Nearable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C8C9A1C7CD79500468E1C /* Nearable.swift */; };
+		371C8C9C1C7CD79500468E1C /* Nearable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C8C9A1C7CD79500468E1C /* Nearable.swift */; };
+		371C8C9D1C7CD79500468E1C /* Nearable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C8C9A1C7CD79500468E1C /* Nearable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,11 @@
 		371C8C831C7CCE2000468E1C /* NearablesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NearablesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		371C8C871C7CCE2000468E1C /* NearablesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearablesUITests.swift; sourceTree = "<group>"; };
 		371C8C891C7CCE2000468E1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		371C8C991C7CCE7000468E1C /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
+		371C8C9A1C7CD79500468E1C /* Nearable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nearable.swift; sourceTree = "<group>"; };
+		7AE5E94DF05BDC0ACC1436E4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AB499086A57E35132A87620 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A2106F2442044F3BD545798A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0656C4C725A39F4352425755 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03487019A2243012986670FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7AE5E94DF05BDC0ACC1436E4 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		371C8C5B1C7CCE2000468E1C = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +99,8 @@
 				371C8C7B1C7CCE2000468E1C /* NearablesTests */,
 				371C8C861C7CCE2000468E1C /* NearablesUITests */,
 				371C8C651C7CCE2000468E1C /* Products */,
+				CD2E0F71867A8062B23DD696 /* Pods */,
+				03487019A2243012986670FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +119,12 @@
 			children = (
 				371C8C671C7CCE2000468E1C /* AppDelegate.swift */,
 				371C8C691C7CCE2000468E1C /* ViewController.swift */,
+				371C8C9A1C7CD79500468E1C /* Nearable.swift */,
 				371C8C6B1C7CCE2000468E1C /* Main.storyboard */,
 				371C8C6E1C7CCE2000468E1C /* Assets.xcassets */,
 				371C8C701C7CCE2000468E1C /* LaunchScreen.storyboard */,
 				371C8C731C7CCE2000468E1C /* Info.plist */,
+				371C8C991C7CCE7000468E1C /* ObjCBridge.h */,
 			);
 			path = Nearables;
 			sourceTree = "<group>";
@@ -125,6 +147,15 @@
 			path = NearablesUITests;
 			sourceTree = "<group>";
 		};
+		CD2E0F71867A8062B23DD696 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9AB499086A57E35132A87620 /* Pods.debug.xcconfig */,
+				A2106F2442044F3BD545798A /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +163,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 371C8C8C1C7CCE2000468E1C /* Build configuration list for PBXNativeTarget "Nearables" */;
 			buildPhases = (
+				91D491AD9A9167F2B7586E85 /* Check Pods Manifest.lock */,
 				371C8C601C7CCE2000468E1C /* Sources */,
 				371C8C611C7CCE2000468E1C /* Frameworks */,
 				371C8C621C7CCE2000468E1C /* Resources */,
+				5FE9366CAF7691895C477E32 /* Embed Pods Frameworks */,
+				4E31C793BF74A0C8A9A2B20E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,6 +228,11 @@
 					371C8C631C7CCE2000468E1C = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = CV5Q25VKZ3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					371C8C771C7CCE2000468E1C = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -254,12 +293,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4E31C793BF74A0C8A9A2B20E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FE9366CAF7691895C477E32 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91D491AD9A9167F2B7586E85 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		371C8C601C7CCE2000468E1C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				371C8C6A1C7CCE2000468E1C /* ViewController.swift in Sources */,
+				371C8C9B1C7CD79500468E1C /* Nearable.swift in Sources */,
 				371C8C681C7CCE2000468E1C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				371C8C7D1C7CCE2000468E1C /* NearablesTests.swift in Sources */,
+				371C8C9C1C7CD79500468E1C /* Nearable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				371C8C881C7CCE2000468E1C /* NearablesUITests.swift in Sources */,
+				371C8C9D1C7CD79500468E1C /* Nearable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,23 +490,35 @@
 		};
 		371C8C8D1C7CCE2000468E1C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AB499086A57E35132A87620 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Nearables/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Foundry.Nearables;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
 			};
 			name = Debug;
 		};
 		371C8C8E1C7CCE2000468E1C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2106F2442044F3BD545798A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Nearables/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Foundry.Nearables;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
 			};
 			name = Release;
 		};
@@ -424,6 +526,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = NearablesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Foundry.NearablesTests;
@@ -436,6 +542,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = NearablesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Foundry.NearablesTests;
@@ -447,6 +557,10 @@
 		371C8C931C7CCE2000468E1C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = NearablesUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Foundry.NearablesUITests;
@@ -459,6 +573,10 @@
 		371C8C941C7CCE2000468E1C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = NearablesUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Foundry.NearablesUITests;
@@ -487,6 +605,7 @@
 				371C8C8E1C7CCE2000468E1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		371C8C8F1C7CCE2000468E1C /* Build configuration list for PBXNativeTarget "NearablesTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +614,7 @@
 				371C8C911C7CCE2000468E1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		371C8C921C7CCE2000468E1C /* Build configuration list for PBXNativeTarget "NearablesUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +623,7 @@
 				371C8C941C7CCE2000468E1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
