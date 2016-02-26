@@ -9,9 +9,11 @@
 import UIKit
 import CocoaMQTT
 
-let HOST: String = "localhost"
-let PORT: UInt16 = 1883
+let HOST: String = "m20.cloudmqtt.com"
+let PORT: UInt16 = 13119
 let SECURE = false
+let USER = "sqkspljc"
+let PASSWORD = "3NX3rRyb0Bl0"
 
 class ViewController: UIViewController, ESTTriggerManagerDelegate, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var tableView: UITableView!
@@ -63,11 +65,11 @@ class ViewController: UIViewController, ESTTriggerManagerDelegate, UITableViewDe
         let clientIdPid = "NearablesApp-" + String(NSProcessInfo().processIdentifier)
         mqtt = CocoaMQTT(clientId: clientIdPid, host: HOST, port: PORT)
         if let mqtt = mqtt {
-            mqtt.username = "test"
-            mqtt.password = "public"
+            mqtt.username = MQTTBrokerDetails.user
+            mqtt.password = MQTTBrokerDetails.password
             mqtt.willMessage = CocoaMQTTWill(topic: "/will", message: "dieout")
             mqtt.keepAlive = 90
-            mqtt.secureMQTT = SECURE
+            mqtt.secureMQTT = false
             mqtt.delegate = self
             mqtt.connect()
         }

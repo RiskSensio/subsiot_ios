@@ -18,6 +18,7 @@
 		371C8C9B1C7CD79500468E1C /* Nearable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C8C9A1C7CD79500468E1C /* Nearable.swift */; };
 		371C8C9C1C7CD79500468E1C /* Nearable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C8C9A1C7CD79500468E1C /* Nearable.swift */; };
 		371C8C9D1C7CD79500468E1C /* Nearable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C8C9A1C7CD79500468E1C /* Nearable.swift */; };
+		37D65D701C80816100AAFE70 /* MQTTBrokerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D65D6F1C80816100AAFE70 /* MQTTBrokerDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		371C8C891C7CCE2000468E1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		371C8C991C7CCE7000468E1C /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
 		371C8C9A1C7CD79500468E1C /* Nearable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nearable.swift; sourceTree = "<group>"; };
+		37D65D6F1C80816100AAFE70 /* MQTTBrokerDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQTTBrokerDetails.swift; sourceTree = "<group>"; };
 		7AE5E94DF05BDC0ACC1436E4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB499086A57E35132A87620 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A2106F2442044F3BD545798A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			children = (
 				371C8C671C7CCE2000468E1C /* AppDelegate.swift */,
 				371C8C691C7CCE2000468E1C /* ViewController.swift */,
+				37D65D6F1C80816100AAFE70 /* MQTTBrokerDetails.swift */,
 				371C8C9A1C7CD79500468E1C /* Nearable.swift */,
 				371C8C6B1C7CCE2000468E1C /* Main.storyboard */,
 				371C8C6E1C7CCE2000468E1C /* Assets.xcassets */,
@@ -349,6 +352,7 @@
 				371C8C6A1C7CCE2000468E1C /* ViewController.swift in Sources */,
 				371C8C9B1C7CD79500468E1C /* Nearable.swift in Sources */,
 				371C8C681C7CCE2000468E1C /* AppDelegate.swift in Sources */,
+				37D65D701C80816100AAFE70 /* MQTTBrokerDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

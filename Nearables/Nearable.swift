@@ -54,7 +54,7 @@ public class  Nearable: CustomStringConvertible
             var data = [UInt8](count: count, repeatedValue: 0)
             json.getBytes(&data, length:count * sizeof(UInt8))
             
-            let message = CocoaMQTTMessage(topic: "name", payload: data)
+            let message = CocoaMQTTMessage(topic: "nearable/\(self.name)", payload: data, retain: true)
             mqtt.publish(message )
          } catch {
             print("Nearable::updateMotion: JSON conversion error")
