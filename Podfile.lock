@@ -1,0 +1,13 @@
+PODS:
+  - CocoaMQTT (1.0.0)
+  - EstimoteSDK (3.8.2)
+
+DEPENDENCIES:
+  - CocoaMQTT
+  - EstimoteSDK
+
+SPEC CHECKSUMS:
+  CocoaMQTT: 49d2bbcba5553ff983e35292bdab0a357fe9b177
+  EstimoteSDK: 5e36b596f9f28161bff35b086d9f70282be5f513
+
+COCOAPODS: 0.39.0
