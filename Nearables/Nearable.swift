@@ -33,8 +33,8 @@ public class  Nearable: CustomStringConvertible
         
         self.motion = false
 
-        self.humidity = 70.0
-        self.temperature = 15.0
+        self.humidity = 40.0
+        self.temperature = 7.0
         self.vibration = 0
         
         self.mqtt = CocoaMQTT(clientId: self.user, host: MQTTBrokerDetails.host, port: MQTTBrokerDetails.port)
@@ -45,8 +45,8 @@ public class  Nearable: CustomStringConvertible
         self.mqtt.keepAlive = 60
         self.mqtt.secureMQTT = false
 
-        self.temperature += 10 * self.rand()
-        self.humidity += 20.0 * self.rand()
+        self.temperature += 20 * self.rand()
+        self.humidity += 25.0 * self.rand()
 
         self.mqtt.delegate = self
         self.connect()
@@ -92,6 +92,17 @@ public class  Nearable: CustomStringConvertible
     }
     
     public func publish(){
+        self.humidity += self.rand() - 0.5
+        self.temperature += 0.1 * self.rand() - 0.05
+        
+        if self.motion{
+            self.vibration = 750.0 + 500.0 * self.rand()
+            
+        }
+        else {
+            self.vibration = 20.0 * self.rand()
+        }
+        
         
         let publishArray = [
             [

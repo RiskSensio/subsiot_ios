@@ -102,8 +102,20 @@ class ViewController: UIViewController, ESTTriggerManagerDelegate, UITableViewDe
             self.triggerManager.startMonitoringForTrigger(trigger)
         }
         
+        
+        var _ = NSTimer.scheduledTimerWithTimeInterval(
+            2, target: self, selector: "updateTimer", userInfo: nil, repeats: true)
+        
         let inset = UIEdgeInsetsMake(20, 0, 0, 0);
         self.tableView.contentInset = inset;
+    }
+    
+    func updateTimer() {
+        let beaconArray = Array(beaconDict.values)
+        for beacon in beaconArray{
+            beacon.publish()
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
