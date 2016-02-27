@@ -9,12 +9,6 @@
 import UIKit
 import CocoaMQTT
 
-let HOST: String = "m20.cloudmqtt.com"
-let PORT: UInt16 = 13119
-let SECURE = false
-let USER = "sqkspljc"
-let PASSWORD = "3NX3rRyb0Bl0"
-
 class ViewController: UIViewController, ESTTriggerManagerDelegate, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var tableView: UITableView!
     
@@ -39,13 +33,65 @@ class ViewController: UIViewController, ESTTriggerManagerDelegate, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
         self.triggerManager.delegate = self
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
             
         // Create the beacon objects
-        for (name, id) in beaconsToInitialize {
-            beaconDict[name] = Nearable(id: id, name: name)
+        let beacons = [
+            Nearable(id:"0c2c5211518bf1c1",
+                name: "generic",
+                user: "fa2bb0ad-7610-4eaa-b0ca-10a3bcec1767",
+                password:"7eLjm5NYB9De" ),
+            Nearable(
+                id: "4a975635090429cc",
+                name: "shoe",
+                user: "b3f3ce5b-770c-408d-9536-36c0599f4f7d",
+                password: "IpjPtR0cq69A"),
+            Nearable(
+                id: "7efbd1ffdbcf6fb6",
+                name: "fridge",
+                user: "818ec1c6-6c0f-4faf-84e4-57036d53d55e",
+                password: "MbCm0I7rwkAA"
+            ),
+            Nearable(
+                id: "5236196e81f359fd",
+                name: "chair",
+                user: "7f7f055a-7e7c-4cb6-8de1-404bd905fd81",
+                password: "qzHw3lxvdYb2"
+            ),
+            Nearable(
+                id: "0d307207d56db10a",
+                name: "bike",
+                user: "e63c9313-f038-4e2b-a5ea-87d6f22df9fd",
+                password:"i0hAVD7LC0xh"
+            ),
+            Nearable(
+                id: "73125629c76f4925",
+                name: "door",
+                user: "7e5045b1-3bdd-49f2-8a8f-24740ca931b0",
+                password: "6rf4Uqg1YM6q"
+            ),
+            Nearable(
+                id: "79546c411374882e",
+                name: "bed",
+                user: "277e930c-4d8d-4bf3-bcff-beddafd51647",
+                password: "Ncj9sI1spoqr"
+            ),
+            Nearable(
+                id: "415f37c75e5ccf92",
+                name: "car",
+                user: "1a0674b8-b48b-42b3-9d09-4e06e7fdd83f",
+                password: "r9TZwh6iLm_f"
+            ),
+//            Nearable(id: "de7060c7ff7cea46", name: "dog", client_id: "TteH/YImbTAqiqvNWyM0wyA")
+//            Nearable(id: "6f5f658b0ac6c3c3", name: "keys", client_id: "TteH/YImbTAqiqvNWyM0wyA"),
+        ]
+
+        
+        for beacon in beacons {
+            beaconDict[beacon.name] = beacon
         }
         
         for (_, beacon) in beaconDict
@@ -58,21 +104,6 @@ class ViewController: UIViewController, ESTTriggerManagerDelegate, UITableViewDe
         
         let inset = UIEdgeInsetsMake(20, 0, 0, 0);
         self.tableView.contentInset = inset;
-        self.mqttSetting()
-    }
-    
-    func mqttSetting() {
-        let clientIdPid = "NearablesApp-" + String(NSProcessInfo().processIdentifier)
-        mqtt = CocoaMQTT(clientId: clientIdPid, host: HOST, port: PORT)
-        if let mqtt = mqtt {
-            mqtt.username = MQTTBrokerDetails.user
-            mqtt.password = MQTTBrokerDetails.password
-            mqtt.willMessage = CocoaMQTTWill(topic: "/will", message: "dieout")
-            mqtt.keepAlive = 90
-            mqtt.secureMQTT = false
-            mqtt.delegate = self
-            mqtt.connect()
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -87,9 +118,8 @@ class ViewController: UIViewController, ESTTriggerManagerDelegate, UITableViewDe
             beacon.updateMotion(trigger.state)
             print("Trigger from \(beacon)")
             
-            if let mqtt = mqtt {
-                beacon.publish(mqtt)
-            }
+            beacon.publish()
+        
             self.tableView.reloadData()
         
     }
@@ -111,11 +141,7 @@ class ViewController: UIViewController, ESTTriggerManagerDelegate, UITableViewDe
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("You selected cell #\(indexPath.row)!")
         let beaconArray = Array(beaconDict.values)
-        let beacon = beaconArray[indexPath.row]
-        if let mqtt = mqtt {
-            beacon.publish(mqtt)
-
-        }
+        beaconArray[indexPath.row].publish()
     }
 }
 
@@ -129,12 +155,14 @@ extension ViewController: CocoaMQTTDelegate {
     func mqtt(mqtt: CocoaMQTT, didConnectAck ack: CocoaMQTTConnAck) {
         print("didConnectAck \(ack.rawValue)")
         if ack == .ACCEPT {
+            print("connected OK")
         }
         
     }
     
     func mqtt(mqtt: CocoaMQTT, didPublishMessage message: CocoaMQTTMessage, id: UInt16) {
         print("didPublishMessage with message: \(message.string)")
+        print("topic: \(message.topic)")
     }
     
     func mqtt(mqtt: CocoaMQTT, didPublishAck id: UInt16) {
