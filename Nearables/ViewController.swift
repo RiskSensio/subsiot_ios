@@ -21,10 +21,10 @@ class ViewController: UIViewController, ESTTriggerManagerDelegate, UITableViewDe
         "chair": "5236196e81f359fd",
         "keys": "6f5f658b0ac6c3c3",
         "bike": "0d307207d56db10a",
-        "door": "73125629c76f4925",
-        "bed": "79546c411374882e",
-        "car": "415f37c75e5ccf92",
-        "dog": "de7060c7ff7cea46",
+//        "door": "73125629c76f4925",
+//        "bed": "79546c411374882e",
+//        "car": "415f37c75e5ccf92",
+//        "dog": "de7060c7ff7cea46",
     ]
     
     var beaconDict = [String: Nearable]()
@@ -41,50 +41,50 @@ class ViewController: UIViewController, ESTTriggerManagerDelegate, UITableViewDe
         // Create the beacon objects
         let beacons = [
             Nearable(id:"0c2c5211518bf1c1",
-                name: "generic",
-                user: "fa2bb0ad-7610-4eaa-b0ca-10a3bcec1767",
-                password:"7eLjm5NYB9De" ),
+                name: "Westminster( generic)",
+                user: "db57d5fa-bd4c-49c4-b0bf-62dc3e76ef84",
+                password:"ictPDjoyQ6_e" ),
             Nearable(
                 id: "4a975635090429cc",
-                name: "shoe",
-                user: "b3f3ce5b-770c-408d-9536-36c0599f4f7d",
-                password: "IpjPtR0cq69A"),
+                name: "FCA (shoe)",
+                user: "fddd8173-2a23-478f-b165-f0fc4e127ab2",
+                password: "xV40f2Xi.VAw"),
             Nearable(
                 id: "7efbd1ffdbcf6fb6",
-                name: "fridge",
-                user: "818ec1c6-6c0f-4faf-84e4-57036d53d55e",
-                password: "MbCm0I7rwkAA"
+                name: "Deutsche (fridge )",
+                user: "0ff32a44-6bd8-4aad-bef7-9327887e8003",
+                password: "owNXJM4VPTE9"
             ),
             Nearable(
                 id: "5236196e81f359fd",
-                name: "chair",
-                user: "7f7f055a-7e7c-4cb6-8de1-404bd905fd81",
-                password: "qzHw3lxvdYb2"
+                name: "TFL (chair)",
+                user: "ebff6be5-c141-42e8-a892-d16f9f7c2e7a",
+                password: "zpTsJLLGgl4N"
             ),
             Nearable(
                 id: "0d307207d56db10a",
-                name: "bike",
-                user: "e63c9313-f038-4e2b-a5ea-87d6f22df9fd",
-                password:"i0hAVD7LC0xh"
+                name: "Britinsur (bike)",
+                user: "aa8c2b64-35f2-4939-8798-7d3a48f814f8",
+                password:"NdCggrrzUZFf"
             ),
             Nearable(
                 id: "73125629c76f4925",
-                name: "door",
-                user: "7e5045b1-3bdd-49f2-8a8f-24740ca931b0",
-                password: "6rf4Uqg1YM6q"
+                name: "Hoxton (door)",
+                user: "82342961-c1f4-41e5-86fa-54dd17138695",
+                password: "tZiPC5QnGy8y"
             ),
-            Nearable(
-                id: "79546c411374882e",
-                name: "bed",
-                user: "277e930c-4d8d-4bf3-bcff-beddafd51647",
-                password: "Ncj9sI1spoqr"
-            ),
-            Nearable(
-                id: "415f37c75e5ccf92",
-                name: "car",
-                user: "1a0674b8-b48b-42b3-9d09-4e06e7fdd83f",
-                password: "r9TZwh6iLm_f"
-            ),
+//            Nearable(
+//                id: "79546c411374882e",
+//                name: "bed",
+//                user: "277e930c-4d8d-4bf3-bcff-beddafd51647",
+//                password: "Ncj9sI1spoqr"
+//            ),
+//            Nearable(
+//                id: "415f37c75e5ccf92",
+//                name: "car",
+//                user: "1a0674b8-b48b-42b3-9d09-4e06e7fdd83f",
+//                password: "r9TZwh6iLm_f"
+//            ),
 //            Nearable(id: "de7060c7ff7cea46", name: "dog", client_id: "TteH/YImbTAqiqvNWyM0wyA")
 //            Nearable(id: "6f5f658b0ac6c3c3", name: "keys", client_id: "TteH/YImbTAqiqvNWyM0wyA"),
         ]
@@ -104,7 +104,7 @@ class ViewController: UIViewController, ESTTriggerManagerDelegate, UITableViewDe
         
         
         var _ = NSTimer.scheduledTimerWithTimeInterval(
-            2, target: self, selector: "updateTimer", userInfo: nil, repeats: true)
+            2, target: self, selector: #selector(ViewController.updateTimer), userInfo: nil, repeats: true)
         
         let inset = UIEdgeInsetsMake(20, 0, 0, 0);
         self.tableView.contentInset = inset;

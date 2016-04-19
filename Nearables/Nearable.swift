@@ -75,8 +75,16 @@ public class  Nearable: CustomStringConvertible
     public func updateMotion(moving: Bool){
         self.motion = moving
   
-        self.humidity += 2.5 * self.rand() - 0.5
-        self.temperature += self.rand() - 0.5
+        self.humidity += 3 * (self.rand() - 0.5)
+        if self.humidity < 0.0 {
+            self.humidity = 0.0
+        }
+        
+        self.temperature += 0.1 * self.rand() - 0.5
+        if self.temperature < 0.0 {
+            self.temperature = 0.0
+        }
+        
         
         if self.motion{
             self.vibration = 750.0 + 500.0 * self.rand()
@@ -84,6 +92,10 @@ public class  Nearable: CustomStringConvertible
         }
         else {
             self.vibration = 20.0 * self.rand()
+        }
+        
+        if self.vibration < 5.0 {
+            self.vibration = 5.0
         }
     }
     
