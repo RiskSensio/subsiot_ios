@@ -84,8 +84,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-NearablesUITests/CocoaAsyncSocket.framework"
   install_framework "Pods-NearablesUITests/CocoaMQTT.framework"
+  install_framework "Pods-NearablesUITests/MSWeakTimer.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-NearablesUITests/CocoaAsyncSocket.framework"
   install_framework "Pods-NearablesUITests/CocoaMQTT.framework"
+  install_framework "Pods-NearablesUITests/MSWeakTimer.framework"
 fi

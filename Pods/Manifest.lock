@@ -1,13 +1,25 @@
 PODS:
-  - CocoaMQTT (1.0.0)
-  - EstimoteSDK (3.8.2)
+  - CocoaAsyncSocket (7.4.3):
+    - CocoaAsyncSocket/All (= 7.4.3)
+  - CocoaAsyncSocket/All (7.4.3):
+    - CocoaAsyncSocket/GCD
+    - CocoaAsyncSocket/RunLoop
+  - CocoaAsyncSocket/GCD (7.4.3)
+  - CocoaAsyncSocket/RunLoop (7.4.3)
+  - CocoaMQTT (1.0.5):
+    - CocoaAsyncSocket (~> 7.4.2)
+    - MSWeakTimer (~> 1.1.0)
+  - EstimoteSDK (4.1.0)
+  - MSWeakTimer (1.1.0)
 
 DEPENDENCIES:
   - CocoaMQTT
   - EstimoteSDK
 
 SPEC CHECKSUMS:
-  CocoaMQTT: 49d2bbcba5553ff983e35292bdab0a357fe9b177
-  EstimoteSDK: 5e36b596f9f28161bff35b086d9f70282be5f513
+  CocoaAsyncSocket: a18c75dca4b08723628a0bacca6e94803d90be91
+  CocoaMQTT: 31dfd6180af49cd82852d739e83b4ef0fa74f199
+  EstimoteSDK: d4ae7f9b7fafd26101d002fec786b6f674537357
+  MSWeakTimer: 9426150f933b80ed3acf3f6d228e4b61f0e303c8
 
 COCOAPODS: 0.39.0
