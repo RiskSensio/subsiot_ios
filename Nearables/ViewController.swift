@@ -15,16 +15,16 @@ class ViewController: UIViewController, ESTTriggerManagerDelegate, UITableViewDe
     let triggerManager = ESTTriggerManager()
     
     let beaconsToInitialize:[String: String] = [
-        "generic": "0c2c5211518bf1c1",
+//        "generic": "0c2c5211518bf1c1",
         "shoe": "4a975635090429cc",
         "fridge": "7efbd1ffdbcf6fb6",
-        "chair": "5236196e81f359fd",
-        "keys": "6f5f658b0ac6c3c3",
-        "bike": "0d307207d56db10a",
-//        "door": "73125629c76f4925",
-//        "bed": "79546c411374882e",
-//        "car": "415f37c75e5ccf92",
-//        "dog": "de7060c7ff7cea46",
+//        "chair": "5236196e81f359fd",
+//        "keys": "6f5f658b0ac6c3c3",
+//        "bike": "0d307207d56db10a",
+        "door": "73125629c76f4925",
+        "bed": "79546c411374882e",
+        "car": "415f37c75e5ccf92",
+        "dog": "de7060c7ff7cea46",
     ]
     
     var beaconDict = [String: Nearable]()
@@ -40,39 +40,39 @@ class ViewController: UIViewController, ESTTriggerManagerDelegate, UITableViewDe
             
         // Create the beacon objects
         let beacons = [
-            Nearable(id:"0c2c5211518bf1c1",
-                name: "Westminster( generic)",
+            Nearable(id:"4a975635090429cc",
+                name: "Westminster(shoe)",
                 user: "db57d5fa-bd4c-49c4-b0bf-62dc3e76ef84",
                 password:"ictPDjoyQ6_e" ),
             Nearable(
-                id: "4a975635090429cc",
-                name: "FCA (shoe)",
+                id: "7efbd1ffdbcf6fb6",
+                name: "FCA (fridge)",
                 user: "fddd8173-2a23-478f-b165-f0fc4e127ab2",
                 password: "xV40f2Xi.VAw"),
             Nearable(
-                id: "7efbd1ffdbcf6fb6",
-                name: "Deutsche (fridge )",
+                id: "73125629c76f4925",
+                name: "Deutsche (door)",
                 user: "0ff32a44-6bd8-4aad-bef7-9327887e8003",
                 password: "owNXJM4VPTE9"
             ),
             Nearable(
-                id: "5236196e81f359fd",
-                name: "TFL (chair)",
+                id: "79546c411374882e",
+                name: "TFL (bed)",
                 user: "ebff6be5-c141-42e8-a892-d16f9f7c2e7a",
                 password: "zpTsJLLGgl4N"
             ),
             Nearable(
-                id: "0d307207d56db10a",
-                name: "Britinsur (bike)",
+                id: "415f37c75e5ccf92",
+                name: "Britinsur (car)",
                 user: "aa8c2b64-35f2-4939-8798-7d3a48f814f8",
                 password:"NdCggrrzUZFf"
             ),
             Nearable(
-                id: "73125629c76f4925",
-                name: "Hoxton (door)",
+                id: "de7060c7ff7cea46",
+                name: "Hoxton (dog)",
                 user: "82342961-c1f4-41e5-86fa-54dd17138695",
                 password: "tZiPC5QnGy8y"
-            ),
+            )
 //            Nearable(
 //                id: "79546c411374882e",
 //                name: "bed",
